@@ -48,3 +48,10 @@ The primary goal is to localize a satellite in its home solar system using a **p
   - *Part B:* Multiple percent illumination readings (one per planet, ordered by distance from the sun).  
 - **Resource Limit:** You have up to **300 simulated days** before running out of supplies (or risk hitting the CPU timeout).  
 - **Messaging:** Must transmit 10 SOS messages to the home planet for retrieval.
+
+
+# Localization Results
+
+Shown below are some examples of a successfully implemented particle filter for localizing the satellite. The particles in each example scenario are initiated in a uniform distribution across the x, y plane, then reweighted with each iteration according to which particles most accurately describe the location of the satellite.
+
+![Particle Filter Localization](https://github.com/user-attachments/assets/a32bb152-f70a-4e45-b5d4-377d4e1a911c)
