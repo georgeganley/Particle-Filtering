@@ -56,9 +56,8 @@ Shown below are some examples of a successfully implemented particle filter for 
 
 The first set of examples use gravitational force vectors as measurements to inform the particle filter's reweighting process. Each particle is reweighted according to the calculation below, assuming a gaussian distribution for estimating probability:
 
-   \[
-   w_i = \exp\Biggl(-\frac{(z - \hat{z}_i)^2}{2\sigma^2}\Biggr),
-   \]
+$$w_i = \exp\Biggl(-\frac{(z - \hat{z}_i)^2}{2\sigma^2}\Biggr)$$
+
    where:
    - \(z\) is the actual sensor reading (gravimeter value).  
    - \(\hat{z}_i\) is particle \(i\)’s predicted reading.  
