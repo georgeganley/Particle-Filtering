@@ -59,9 +59,9 @@ The first set of examples use gravitational force vectors as measurements to inf
 $$w_i = \exp\Biggl(-\frac{(z - \hat{z}_i)^2}{2\sigma^2}\Biggr)$$
 
    where:
-   - \(z\) is the actual sensor reading (gravimeter value).  
-   - \(\hat{z}_i\) is particle \(i\)’s predicted reading.  
-   - \(\sigma\) is the standard deviation of the sensor noise.
+   - $(z)$ is the actual sensor reading (gravimeter value).  
+   - $(hat{z}_i)$ is particle \(i\)’s predicted reading.  
+   - $(\sigma)$ is the standard deviation of the sensor noise.
 
 ![Particle Filter Localization](https://github.com/user-attachments/assets/a32bb152-f70a-4e45-b5d4-377d4e1a911c)
 
