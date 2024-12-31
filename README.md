@@ -1,4 +1,4 @@
-## Acknowledgments
+# Acknowledgments
 
 This project was completed as part of the AI for Robotics course at Georgia Tech. This repository does not include the code or solution to the project, but does illustrate the outcomes of a successful particle filtering implementation.
 
@@ -54,4 +54,18 @@ The primary goal is to localize a satellite in its home solar system using a **p
 
 Shown below are some examples of a successfully implemented particle filter for localizing the satellite. The particles in each example scenario are initiated in a uniform distribution across the x, y plane, then reweighted with each iteration according to which particles most accurately describe the location of the satellite.
 
+The first set of examples use gravitational force vectors as measurements to inform the particle filter's reweighting process. Each particle is reweighted according to the calculation below, assuming a gaussian distribution for estimating probability:
+
+   w_i = \exp\Biggl(-\frac{(z - \hat{z}_i)^2}{2\sigma^2}\Biggr),
+   \]
+   where:
+   - \(z\) is the actual sensor reading (gravimeter value).  
+   - \(\hat{z}_i\) is particle \(i\)’s predicted reading.  
+   - \(\sigma\) is the standard deviation of the sensor noise.
+
 ![Particle Filter Localization](https://github.com/user-attachments/assets/a32bb152-f70a-4e45-b5d4-377d4e1a911c)
+
+
+The second set of examples uses illumination data of other bodies in the solar system to localize the satellite (reweighting particles with the same calculation as above, replacing gravitational force with illumination %). In addition, the angle between the home planet and estimated satellite position is calculated to send signals from one to the other.
+
+![localization and signal calc](https://github.com/user-attachments/assets/d7e2d4a8-17c6-4c1f-8fe2-f32b3f9121a7)
